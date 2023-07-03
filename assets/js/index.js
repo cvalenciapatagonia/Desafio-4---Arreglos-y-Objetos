@@ -116,14 +116,15 @@ buscarButton.addEventListener("click", function () {
 // Declaracion y generacion del botón limpiar busqueda
 const limpiarButton = document.getElementById("limpiarBusqueda");
 
-// Agregando evento al boton limpiar busqueda
+// Agregando evento al botón limpiar búsqueda
 limpiarButton.addEventListener("click", function () {
   document.getElementById("cuartosInput").value = "";
   document.getElementById("metrosDesdeInput").value = "";
   document.getElementById("metrosHastaInput").value = "";
 
   // Restaurarcion de las propiedades originales de la pagina
-  propiedadesContainer.innerHTML = "";
+  propiedadesContainer.innerHTML = ""; // Vaciar el contenido del contenedor
+
   for (let i = 0; i < propiedadesJSONOriginal.length; i++) {
     const propiedad = propiedadesJSONOriginal[i];
     const htmlPropiedad = generarHTMLPropiedad(propiedad);
